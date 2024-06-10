@@ -1,52 +1,163 @@
-img {
-    position: relative;
-    width: 100%;
-    height: 750px;
-    z-index: -1;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cabecera {
+    height: 160px;
+    background-color: white;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 h1 {
-    font-family: sans-serif;
     text-transform: uppercase;
-    display: inline-block;
     color: rgb(0, 157, 149);
-    margin-left: 50px;
 }
 
 span {
     color: #e8999f;
 }
 
-.cabecera {
+.menu {
+    max-width: 980px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: white;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
+.menu a {
+    text-decoration: none;
+    color: rgb(0, 157, 149);
+    padding: 10px 15px;
+    font-size: 20px;
+}
+
+.openMenu, .closeMenu {
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.loginMenu {
+    font-size: 30px;
+}
 
 .loginMenu a {
     color: rgb(0, 157, 149);
-    font-size: 25px;
-    margin-right: 50px;
+    padding: 0 20px;
 }
 
-nav {
+@media (max-width: 768px) {
+    .menu {
+        height: 100%;
+        width: 160px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: white;
+        display: block;
+        text-align: center;
+    }
+
+    h1 {
+        padding: 30px 0;
+        font-size: 17px;
+    }
+
+    .menu a {
+        display: block;
+        text-decoration: none;
+        color: rgb(0, 157, 149);
+        padding: 30px 0px;
+        font-size: 16px;
+    }
+
+    .menu a:first-child {
+        margin-top: 130px;
+    }
+
+    .loginMenu {
+        margin-right: 120px;
+        padding: 0px 0;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        width: 100px;
+        justify-content: space-between;
+    }
+
+    .loginMenu a {
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .openMenu, .closeMenu {
+        display: block;
+    }
+
+    .cabecera {
+    height: 160px;
+    background-color: white;
+    padding: 0 50px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 990px;
-    font-size: 18px;
-  
 }
 
-nav a {
-    text-decoration: none;
-    color: rgb(0, 157, 149);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 25px;
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: .8s;
+    }
+
+    .menu a {
+        display: block;
+        padding: 20px;
+    }
+
+    .closeMenu {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    .loginMenu {
+        margin: 0;
+    }
+
+    .loginMenu a {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+
+    #check:checked ~ .menu {
+        right: 0;
+    }
+}
+
+
+section {
+    background-image: url(./img/buena_resized.PNG);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
 }
 
 .skinClub {

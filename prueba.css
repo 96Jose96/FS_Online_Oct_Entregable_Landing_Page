@@ -1,0 +1,148 @@
+
+
+img {
+    position: relative;
+    width: 100%;
+    height: 750px;
+    z-index: -1;
+}
+
+h1 {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    display: inline-block;
+    color: rgb(0, 157, 149);
+    margin-left: 50px;
+}
+
+span {
+    color: #e8999f;
+}
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+}
+
+.openMenu, .closeMenu {
+    color: rgb(0, 157, 149);
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    transition: .3s;
+}
+
+#check {
+    display: none;
+}
+
+.loginMenu a {
+    color: rgb(0, 157, 149);
+    font-size: 25px;
+    margin-right: 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 990px;
+    font-size: 18px;
+  
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(0, 157, 149);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 25px;
+}
+
+.skinClub {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    background-color: #e8999f;
+    padding: 20px;
+    border-radius: 50px;
+    position: fixed;
+    top: 820px;
+    left: 30px;
+}
+
+.chat {
+    background-color: #e8999f;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+    font-size: 50px;
+    position: fixed;
+    top: 820px;
+    right: 30px;
+}
+
+@media (max-width:768px) {
+    h1 {
+        font-size: 25px;
+        position: fixed;
+        top: 10px;
+        left: 20px;
+        margin: 0;
+        z-index: 1;
+    }
+    
+    .loginMenu {
+        position: fixed;
+        left: 5px;
+        top: 70px;
+        display: block;
+    }
+
+    .loginMenu a {
+        margin: 0;
+        padding: 20px;
+    }
+
+    nav {
+        position: fixed;
+        background-color: white;
+        left: 0;
+        top: 0;
+        height: 100%;
+        font-size: 14px;
+        display: block;
+        text-align: justify;  
+        z-index: 0;
+    }
+
+    nav a {
+        display: block;
+        text-align: justify;
+    }
+
+    nav a:first-child {
+        margin-top: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .openMenu, .closeMenu {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        background-color: white;
+        left: 0;
+        top: 0;
+        height: 100%;
+        font-size: 14px;
+        display: block;
+        text-align: justify;  
+        z-index: 0;
+    }
+}
